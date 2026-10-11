@@ -1,32 +1,25 @@
 def tokenize(equation):
-    tokenized_equation = []
-    current_number = ""
-    while (len(equation) >  0):
-        for i in range(len(equation)):
-            if (equation[i] == '*') and (equation[i+1] == '*'):
-                tokenized_equation.append(current_number)
-                current_number = ''
-                tokenized_equation.append('**')
-                del equation[i:i+2]
+    tokenized_equation = [i for i in equation]
+    while True:
+        for i in range(len(tokenized_equation)-1):
+            if ((tokenized_equation[i].isdigit() or tokenized_equation[i][-1] == '.') and (tokenized_equation[i+1].isdigit() or tokenized_equation[i+1][-1] == '.')) or (tokenized_equation[i] == tokenized_equation[i+1] and tokenized_equation[i] in '/*'):
+                tokenized_equation[i] = tokenized_equation[i] + tokenized_equation.pop(i+1)
                 break
-            elif (equation[i] == '/') and (equation[i+1] == '/'):
-                tokenized_equation.append(current_number)
-                current_number = ''
-                tokenized_equation.append('//')
-                del equation[i:i+2]
-                break
-            elif (equation[i] in '*/%^+-'):
-                tokenized_equation.append(current_number)
-                current_number = ''
-                tokenized_equation.append(equation[i])
-                del equation[i]
-                break
-            elif (equation[i].isdigit()) or (equation[i] == '.'):
-                current_number += equation[i]
-                del equation[i]
-                break
-    tokenized_equation.append(current_number)
-    if tokenized_equation[1] == '-':
-        n = tokenized_equation.pop(2)
-        tokenized_equation[0:2] = [float('-' + n)]
+        else:
+            break
+    while True:
+        for i in range(len(tokenized_equation)):
+            if (tokenized_equation[i] == '-'):
+                if (tokenized_equation[i-1] in "**//^%+"):
+                    tokenized_equation[i] = '-' + tokenized_equation.pop(i+1)
+                    break
+                else:
+                    tokenized_equation[i+1] = '-' + tokenized_equation[i+1]
+                    if (i != 0):
+                        tokenized_equation[i] = '+'
+                    else:
+                        tokenized_equation.pop(i)
+                    break
+        else:
+            break
     return tokenized_equation
