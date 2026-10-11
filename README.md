@@ -2,6 +2,14 @@
 
 A Python-based expression evaluator that calculates arithmetic expressions entered by the user and displays the result.
 
+## Version
+
+**Current version: 1.0**
+
+Version 1.0 provides basic arithmetic expression evaluation, operator precedence handling, and error handling.
+
+Future versions may introduce additional features, improved input validation, and support for more complex mathematical expressions.
+
 ## Features
 
 - **Supported operators:** `**`, `^`, `//`, `*`, `/`, `%`, `+`, `-`
