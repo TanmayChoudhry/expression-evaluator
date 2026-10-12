@@ -10,6 +10,12 @@ Version 1.0 provides basic arithmetic expression evaluation, operator precedence
 
 Future versions may introduce additional features, improved input validation, and support for more complex mathematical expressions.
 
+## Download
+
+Download **[Expression Evaluator v1.0.0](https://github.com/TanmayChoudhry/expression-evaluator/releases/tag/v1.0.0)**.
+
+Extract the downloaded ZIP file and run `main.py` using Python 3.
+
 ## Features
 
 - **Supported operators:** `**`, `^`, `//`, `*`, `/`, `%`, `+`, `-`
