@@ -2,7 +2,7 @@ def tokenize(equation):
     tokenized_equation = [i for i in equation]
     while True:
         for i in range(len(tokenized_equation)-1):
-            if ((tokenized_equation[i].isdigit() or tokenized_equation[i][-1] == '.') and (tokenized_equation[i+1].isdigit() or tokenized_equation[i+1][-1] == '.')) or (tokenized_equation[i] == tokenized_equation[i+1] and tokenized_equation[i] in '/*'):
+            if ((tokenized_equation[i][-1].isdigit() or tokenized_equation[i][-1] == '.') and (tokenized_equation[i+1][-1].isdigit() or tokenized_equation[i+1][-1] == '.')) or (tokenized_equation[i] == tokenized_equation[i+1] and tokenized_equation[i] in '/*'):
                 tokenized_equation[i] = tokenized_equation[i] + tokenized_equation.pop(i+1)
                 break
         else:
