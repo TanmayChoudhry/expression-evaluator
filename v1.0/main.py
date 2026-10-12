@@ -35,8 +35,7 @@ def main():
                     except:
                         print("Invalid Expression : No Solution Found")
                         continue
-                
-            
+
 if __name__ == "__main__":
     main()
     

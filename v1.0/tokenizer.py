@@ -22,4 +22,7 @@ def tokenize(equation):
                     break
         else:
             break
+    for i in range(len(tokenized_equation)):
+        if tokenized_equation[i] == '^':
+            tokenized_equation[i] = '**'
     return tokenized_equation
