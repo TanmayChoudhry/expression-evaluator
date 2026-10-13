@@ -81,9 +81,3 @@ python main.py
 
 - Parentheses are not supported.
 - Mathematical functions such as `sin`, `cos`, `tan`, and `log` are not supported.
-
-## Copyright
-
-Copyright © 2026. All rights reserved.
-
-No permission is granted to copy, modify, distribute, or reuse this code without prior written permission from the copyright holder.
