@@ -12,7 +12,7 @@ Future versions may introduce additional features, improved input validation, an
 
 ## Download
 
-Download **[Mathematical Expression Evaluator v1.0.0]([https://github.com/TanmayChoudhry/mathematical-expression-evaluator/releases/tag/v1.0.0])**.
+Download **[Mathematical Expression Evaluator v1.0.0](https://github.com/TanmayChoudhry/mathematical-expression-evaluator/releases/tag/v1.0.0)**.
 
 Extract the downloaded ZIP file and run `main.py` using Python 3.
 
